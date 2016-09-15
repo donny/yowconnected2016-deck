@@ -65,7 +65,7 @@
 					<h2>Agenda</h2>
 					<ul>
 						<li><p class="fragment fade-in">Previous 🐣</p></li>
-						<li><p class="fragment fade-in">Problem 🤔</p></li>
+						<li><p class="fragment fade-in">Problems 🤔</p></li>
 						<li><p class="fragment fade-in">Present 🐥</p></li>
 					</ul>
 					<aside class="notes">
@@ -112,7 +112,64 @@
 				</section>
 
 				<section>
+					<aside class="notes">
+						The previous CI infrastructure served our needs at that time.<br/>
+						Jenkins was reasonably okay and it fit with our requirements then.<br/>
+						But we had several problems.
+					</aside>
+				</section>
+
+				<section data-transition="zoom" data-transition-speed="slow">
 					<h1>👻</h1>
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section>
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section>
+					<h2>🛠 Problems</h2>
+					<ul>
+						<li><p class="fragment fade-in">Upgrading Jenkins</p></li>
+						<li><p class="fragment fade-in">Upgrading macOS and Xcode</p></li>
+						<li><p class="fragment fade-in">Unintuitive Configuration</p></li>
+					</ul>
+					<aside class="notes">
+						The upgrading process was complicated and it needed a few Wiki pages.<br/>
+						The build pipeline needed constant care and it became very brittle with successive updates.
+					</aside>
+				</section>
+
+				<section>
+					<img class="plain" data-src="media/broken-vase.jpg">
+					<aside class="notes">
+						As we put more updates and changes done by multiple people over the years.<br/>
+						The infrastructure became like a vase that needed to be handled carefully.<br/>
+						And we were afraid of installing plugins just in case it breaks Jenkins.
+					</aside>
+				</section>
+
+				<section>
+					<h1>📢</h1>
+					<aside class="notes">
+						Further, as a side effect, it affected our workflow.<br/>
+						Failed tests or nightly builds were not noticeable.<br/>
+						Code commits and test builds were not tightly integrated.
+					</aside>
+				</section>
+
+				<section data-background-image="media/waterfall.gif" data-background-repeat="repeat" data-transition="zoom-out">
+					<aside class="notes">
+						Thus, we needed to do something about this.<br/>
+						We did a spike on various CI infrastructure early this year.
+					</aside>
+				</section>
+
+				<section data-transition="zoom-in">
+					<img class="plain" data-src="media/buildkite.png">
 					<aside class="notes">
 					</aside>
 				</section>
