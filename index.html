@@ -153,6 +153,13 @@
 				</section>
 
 				<section>
+					<h1>🐶&nbsp; 🐱</h1>
+					<aside class="notes">
+						Or, in other words, we were treating our CI infrastructure like pets.
+					</aside>
+				</section>
+
+				<section>
 					<h1>📢</h1>
 					<aside class="notes">
 						Further, as a side effect, it affected our workflow.<br/>
@@ -168,9 +175,35 @@
 					</aside>
 				</section>
 
-				<section data-transition="zoom-in">
+				<section data-transition="zoom-in slide-out">
 					<img class="plain" data-src="media/buildkite.png">
 					<aside class="notes">
+						We settled on Buildkite.<br/>
+						It meets our needs and it's really awesome.<br/>
+						It's also used by other tribes at REA and it has been vetted by the security team.<br/>
+						Let's compare Buildkite with other systems.
+					</aside>
+				</section>
+
+				<section data-transition="slide-in">
+					<img class="plain" data-src="media/OverviewCI/OverviewCI.001.jpeg">
+					<aside class="notes">
+						If you look at the market of CI systems, there are two types.<br/>
+						Managed and unmanaged providers.<br/>
+						The managed providers are closed system and multi tenant.<br/>
+						Sometimes, they have on-premises offering.<br/>
+						In contrast to unmanaged provider.<br/>
+						Talk about the components: UI / master / scheduler vs agents.
+					</aside>
+				</section>
+
+				<section data-transition="none">
+					<img class="plain" data-src="media/OverviewCI/OverviewCI.002.jpeg">
+					<aside class="notes">
+						Buildkite is different.<br/>
+						The UI / master or the scheduling component is managed.<br/>
+						The agents are managed by us.<br/>
+						The agent code is open source and we can be confident that our source code doesn't leave our system.
 					</aside>
 				</section>
 
