@@ -251,22 +251,60 @@
 					<img class="plain" data-src="media/Buildkite/Buildkite.004.jpeg">
 					<aside class="notes">
 						If we click on one of the builds, we will see the detailed view.<br/>
-						Where we can see the build steps: Plan Upload, Setup, Unit Test, Upload
+						Where we can see the build pipeline consisting of four build steps: Plan Upload, Setup, Unit Test, Upload
 					</aside>
 				</section>
 
 				<section data-transition="none">
 					<img class="plain" data-src="media/Buildkite/Buildkite.005.jpeg">
 					<aside class="notes">
-						One of the strengths of Buildkite is that we can represent the build steps as code.<br/>
-						Usually as a YAML file. And what we see now was our config.yml file.
+						One of the strengths of Buildkite is that we can represent the build pipeline as code.<br/>
+						Usually as a YAML file. And what we see now was our config.yml file.<br/>
+						The file statically defined our build pipeline.
 					</aside>
 				</section>
 
 				<section data-transition="none">
 					<img class="plain" data-src="media/Buildkite/Buildkite.006.jpeg">
 					<aside class="notes">
-						Where we can see how the build steps correspond to the sections in the YAML file.
+						Where we can see how the build steps correspond to the sections in the YAML file.<br/>
+						But about two months ago, we switched to dynamic pipeline.
+					</aside>
+				</section>
+
+				<section>
+					<h2>Dynamic Pipeline</h2>
+					<ul>
+						<li><p class="fragment fade-in">Branches (e.g. <code>master, production</code>)</p></li>
+						<li><p class="fragment fade-in">Commit messages (e.g. <code>XCODE8</code>)</p></li>
+					</ul>
+					<aside class="notes">
+						Rather than having a static file to define our build steps.<br/>
+						We use Buildkite dynamic pipeline feature to generate build steps dynamically based on conditions.
+					</aside>
+				</section>
+
+				<section data-transition="slide-in none">
+					<img class="plain" data-src="media/PreviousCI/PreviousCI.005.jpeg">
+					<aside class="notes">
+						So, what does our current CI infrastructure looks like?
+					</aside>
+				</section>
+
+				<section data-transition="none">
+					<img class="plain" data-src="media/CurrentCI/CurrentCI.001.jpeg">
+					<aside class="notes">
+						It looks like this in comparison to the previous CI.<br/>
+						Back and forth.
+					</aside>
+				</section>
+
+				<section data-transition="none">
+					<img class="plain" data-src="media/CurrentCI/CurrentCI.002.jpeg">
+					<aside class="notes">
+						But, wait a minute...<br/>
+						It looks similar...<br/>
+						We still to manage our agents manually
 					</aside>
 				</section>
 
