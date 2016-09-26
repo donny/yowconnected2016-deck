@@ -426,6 +426,55 @@
 					</aside>
 				</section>
 
+				<section>
+					<h5><code>config.json</code></h5>
+					<pre>
+						<code class="json">
+{
+  "provider": "vmware",
+  "secret_file": "/Users/macmini/Documents/REA/secret.json",
+  "box_folder": "/Users/macmini/Documents/REA/Box",
+  "xcode_version": "8",
+  "xcode_simulators": "iOS 8.4_iOS 9.3",
+  "xcode_folder": "/Users/macmini/Downloads/Xcode/",
+}
+						</code>
+					</pre>
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section>
+					<h5><code>machines.json</code></h5>
+					<pre>
+						<code class="json">
+{
+  "machines": [
+    {
+      "user_host": "macpro@127.0.0.1",
+      "box_folder": "Documents/REA/Box/",
+      "deploy_folder": "Documents/REA/VM/",
+      "nodes": [
+        {
+          "hostname": "macpro-1", "cpus": "4", "memory": "8192",
+          "buildkite_name": "aap-ios-%hostname",
+          "buildkite_metadata": "queue=aap-ios:resi-mobile-ios:build,xcode=8"
+        },
+        {
+          "hostname": "macpro-2", "cpus": "4", "memory": "8192",
+          "buildkite_name": "aap-ios-%hostname",
+          "buildkite_metadata": "queue=aap-ios:resi-mobile-ios:build,xcode=8"
+        }
+      ]
+    }
+  ]
+}
+						</code>
+					</pre>
+					<aside class="notes">
+					</aside>
+				</section>
+
 			</div>
 		</div>
 
