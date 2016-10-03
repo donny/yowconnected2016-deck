@@ -409,7 +409,125 @@
 					</aside>
 				</section>
 
-				<!-- -->
+				<section>
+					<p>All of the moving parts on one slide:</p>
+					<aside class="notes">
+						So, how does the whole thing work?<br/>
+						Now, I will try to explain how all of the moving parts work together
+					</aside>
+				</section>
+
+				<section data-transition="slide-in none">
+					<img class="plain" data-src="media/BuildkiteCI/BuildkiteCI.001.jpeg">
+					<aside class="notes">
+						We install Buildkite agents on our build machines.
+					</aside>
+				</section>
+
+				<section data-transition="none">
+					<img class="plain" data-src="media/BuildkiteCI/BuildkiteCI.002.jpeg">
+					<aside class="notes">
+						We also have buildkite.com that coordinates jobs.
+					</aside>
+				</section>
+
+				<section data-transition="none">
+					<img class="plain" data-src="media/BuildkiteCI/BuildkiteCI.003.jpeg">
+					<aside class="notes">
+						When we start the agents, each agent polls buildkite.com for work and runs the assigned build jobs.
+					</aside>
+				</section>
+
+				<section data-transition="none">
+					<img class="plain" data-src="media/BuildkiteCI/BuildkiteCI.004.jpeg">
+					<aside class="notes">
+						Each agent is actually part of a queue.<br/>
+						We can think of an agent as a queue worker.<br/>
+						Or, in other words, we can think of agents as abstraction of queues.<br/>
+						In this case we have 2 build agents and 1 deploy agent.
+					</aside>
+				</section>
+
+				<section data-transition="none">
+					<img class="plain" data-src="media/BuildkiteCI/BuildkiteCI.005.jpeg">
+					<aside class="notes">
+						We also have a build pipeline that in this case consists of 3 build steps.<br/>
+						The build steps perform unit tests and upload to Hockey.
+					</aside>
+				</section>
+
+				<section data-transition="none">
+					<img class="plain" data-src="media/BuildkiteCI/BuildkiteCI.006.jpeg">
+					<aside class="notes">
+						The build pipeline is defined by a static config.yml file that is checked in as part of the code repository.
+					</aside>
+				</section>
+
+				<section data-transition="none">
+					<img class="plain" data-src="media/BuildkiteCI/BuildkiteCI.007.jpeg">
+					<aside class="notes">
+						The work for each build step is actually performed by a shell script on a specific queue.
+					</aside>
+				</section>
+
+				<section data-transition="none">
+					<img class="plain" data-src="media/BuildkiteCI/BuildkiteCI.008.jpeg">
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section data-transition="none">
+					<img class="plain" data-src="media/BuildkiteCI/BuildkiteCI.009.jpeg">
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section data-transition="none">
+					<img class="plain" data-src="media/BuildkiteCI/BuildkiteCI.010.jpeg">
+					<aside class="notes">
+						How do we trigger the build pipeline?
+					</aside>
+				</section>
+
+				<section data-transition="none">
+					<img class="plain" data-src="media/BuildkiteCI/BuildkiteCI.011.jpeg">
+					<aside class="notes">
+						There are three ways.
+					</aside>
+				</section>
+
+				<section data-transition="none">
+					<img class="plain" data-src="media/BuildkiteCI/BuildkiteCI.012.jpeg">
+					<aside class="notes">
+						When we invoke one. Buildkite would get the config.yml file and parse it.
+					</aside>
+				</section>
+
+				<section data-transition="none">
+					<img class="plain" data-src="media/BuildkiteCI/BuildkiteCI.013.jpeg">
+					<aside class="notes">
+						Buildkite would allocate the build step job to a free build agent on the specified queue.<br/>
+						Log the output and bring it to the web user interface; and monitor the exit status.
+					</aside>
+				</section>
+
+				<section data-transition="none">
+					<img class="plain" data-src="media/BuildkiteCI/BuildkiteCI.014.jpeg">
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section data-transition="none">
+					<img class="plain" data-src="media/BuildkiteCI/BuildkiteCI.015.jpeg">
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section data-transition="none">
+					<img class="plain" data-src="media/BuildkiteCI/BuildkiteCI.016.jpeg">
+					<aside class="notes">
+					</aside>
+				</section>
 
 				<section data-transition="slide-in none">
 					<img class="plain" data-src="media/Buildkite/Buildkite.001.jpeg">
@@ -435,26 +553,12 @@
 					<img class="plain" data-src="media/Buildkite/Buildkite.004.jpeg">
 					<aside class="notes">
 						If we click on one of the builds, we will see the detailed view.<br/>
-						Where we can see the build pipeline consisting of four build steps: Plan Upload, Setup, Unit Test, Upload
+						Where we can see the build pipeline consisting of four build steps: Plan Upload, Setup, Unit Test, Upload.<br/>
+						The Plan Upload step is ...
 					</aside>
 				</section>
 
-				<section data-transition="none">
-					<img class="plain" data-src="media/Buildkite/Buildkite.005.jpeg">
-					<aside class="notes">
-						One of the strengths of Buildkite is that we can represent the build pipeline as code.<br/>
-						Usually as a YAML file. And what we see now was our config.yml file.<br/>
-						The file statically defined our build pipeline.
-					</aside>
-				</section>
-
-				<section data-transition="none">
-					<img class="plain" data-src="media/Buildkite/Buildkite.006.jpeg">
-					<aside class="notes">
-						Where we can see how the build steps correspond to the sections in the YAML file.<br/>
-						But about two months ago, we switched to dynamic pipeline.
-					</aside>
-				</section>
+				<!-- -->
 
 				<section>
 					<h2>Dynamic Pipeline</h2>
