@@ -660,9 +660,7 @@
 				<section>
 					<img data-src="media/factory-pipeline.jpg">
 					<aside class="notes">
-						The factory has its own Buildkite pipeline.<br/>
-						And the workflow of the VM factory is best described through the build steps.<br/>
-						And I'll explain the build steps with the next few slides.
+						The factory has its own Buildkite pipeline.
 					</aside>
 				</section>
 
@@ -674,12 +672,25 @@
 						<li><p>&nbsp;</p></li>
 					</ul>
 					<aside class="notes">
-						In the pipeline upload step, we simply upload and setup the Buildkite CI steps.
+						The workflow of the VM factory is best described through the build steps.<br/>
+						And I'll explain the build steps with the next few slides.
 					</aside>
 				</section>
 
 				<section data-transition="none">
 					<img data-src="media/FactoryStep/factory-step1.jpg">
+					<ul style="visibility:hidden">
+						<li><p>&nbsp;</p></li>
+						<li><p>&nbsp;</p></li>
+						<li><p>&nbsp;</p></li>
+					</ul>
+					<aside class="notes">
+						In the pipeline upload step, we simply upload and setup the Buildkite CI steps.
+					</aside>
+				</section>
+
+				<section data-transition="none">
+					<img data-src="media/FactoryStep/factory-step2.jpg">
 					<ul>
 						<li><p class="fragment fade-in">Set necessary variables</p></li>
 						<li><p class="fragment fade-in">Ensure software is installed</p></li>
@@ -690,7 +701,7 @@
 				</section>
 
 				<section data-transition="none">
-					<img data-src="media/FactoryStep/factory-step2.jpg">
+					<img data-src="media/FactoryStep/factory-step3.jpg">
 					<ul>
 						<li><p class="fragment fade-in">Get OS X from App Store</p></li>
 						<li><p class="fragment fade-in">Build OS X disk image</p></li>
@@ -702,7 +713,7 @@
 				</section>
 
 				<section data-transition="none">
-					<img data-src="media/FactoryStep/factory-step3.jpg">
+					<img data-src="media/FactoryStep/factory-step4.jpg">
 					<ul>
 						<li><p class="fragment fade-in">Get base OS X image</p></li>
 						<li><p class="fragment fade-in">Build OS X + Xcode disk image</p></li>
@@ -714,7 +725,7 @@
 				</section>
 
 				<section data-transition="none">
-					<img data-src="media/FactoryStep/factory-step4.jpg">
+					<img data-src="media/FactoryStep/factory-step5.jpg">
 					<ul>
 						<li><p class="fragment fade-in">Get OS X + Xcode image</p></li>
 						<li><p class="fragment fade-in">Build OS X + Xcode + Tools disk image</p></li>
@@ -728,7 +739,7 @@
 				</section>
 
 				<section data-transition="none">
-					<img data-src="media/FactoryStep/factory-step5.jpg">
+					<img data-src="media/FactoryStep/factory-step6.jpg">
 					<ul>
 						<li><p class="fragment fade-in">Copy the final disk image to machines</p></li>
 						<li><p class="fragment fade-in">Based on <code>machines.json</code> file</p></li>
@@ -742,7 +753,7 @@
 				</section>
 
 				<section data-transition="none">
-					<img data-src="media/FactoryStep/factory-step6.jpg">
+					<img data-src="media/FactoryStep/factory-step7.jpg">
 					<ul>
 						<li><p class="fragment fade-in">Login to machines and setup necessary files</p></li>
 						<li><p class="fragment fade-in">Destroy previous VMs and clean up</p></li>
