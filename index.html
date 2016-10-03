@@ -706,6 +706,7 @@
 						<li><p>&nbsp;</p></li>
 						<li><p>&nbsp;</p></li>
 						<li><p>&nbsp;</p></li>
+						<li><p>&nbsp;</p></li>
 					</ul>
 					<aside class="notes">
 						The workflow of the VM factory is best described through the build steps.<br/>
@@ -715,10 +716,11 @@
 
 				<section data-transition="none">
 					<img data-src="media/FactoryStep/factory-step1.jpg">
-					<ul style="visibility:hidden">
-						<li><p>&nbsp;</p></li>
-						<li><p>&nbsp;</p></li>
-						<li><p>&nbsp;</p></li>
+					<ul>
+						<li><p class="fragment fade-in">Upload build steps file</p></li>
+						<li><p class="fragment fade-in">Setup Buildkite CI steps</p></li>
+						<li><p class="fragment fade-in">~10 seconds</p></li>
+						<li style="visibility:hidden"><p>&nbsp;</p></li>
 					</ul>
 					<aside class="notes">
 						In the pipeline upload step, we simply upload and setup the Buildkite CI steps.
@@ -731,6 +733,7 @@
 						<li><p class="fragment fade-in">Set necessary variables</p></li>
 						<li><p class="fragment fade-in">Ensure software is installed</p></li>
 						<li><p class="fragment fade-in">Ensure folders are created</p></li>
+						<li><p class="fragment fade-in">~10 seconds</p></li>
 					</ul>
 					<aside class="notes">
 						Set the environment.<br/>
@@ -745,9 +748,10 @@
 						<li><p class="fragment fade-in">Get OS X from App Store</p></li>
 						<li><p class="fragment fade-in">Build OS X disk image</p></li>
 						<li><p class="fragment fade-in">Pack base OS X image and save</p></li>
+						<li><p class="fragment fade-in">~1 hour or ~5 seconds</p></li>
 					</ul>
 					<aside class="notes">
-						If needed...
+						We cache and use the output from the previous successful build.
 					</aside>
 				</section>
 
@@ -757,9 +761,11 @@
 						<li><p class="fragment fade-in">Get base OS X image</p></li>
 						<li><p class="fragment fade-in">Build OS X + Xcode disk image</p></li>
 						<li><p class="fragment fade-in">Pack OS X + Xcode image and save</p></li>
+						<li><p class="fragment fade-in">~1-2 hours or ~5 seconds</p></li>
 					</ul>
 					<aside class="notes">
 						Get the image from the previous step...<br/>
+						We cache and use the output from the previous successful build.
 					</aside>
 				</section>
 
@@ -769,10 +775,12 @@
 						<li><p class="fragment fade-in">Get OS X + Xcode image</p></li>
 						<li><p class="fragment fade-in">Build OS X + Xcode + Tools disk image</p></li>
 						<li><p class="fragment fade-in">Pack OS X + Xcode + Tools and save</p></li>
+						<li><p class="fragment fade-in">~1-2 hours or ~5 seconds</p></li>
 					</ul>
 					<aside class="notes">
 						If needed...<br/>
-						Example of tools: ruby gems, carthage, swift lint, etc.
+						Example of tools: ruby gems, carthage, swift lint, etc.<br/>
+						We cache and use the output from the previous successful build.
 					</aside>
 				</section>
 
@@ -782,6 +790,7 @@
 						<li><p class="fragment fade-in">Copy the final disk image to machines</p></li>
 						<li><p class="fragment fade-in">Based on <code>machines.json</code> file</p></li>
 						<li><p class="fragment fade-in">Machines are in the same private subnet</p></li>
+						<li><p class="fragment fade-in">30GB file &amp; 5 minutes to transfer</p></li>
 					</ul>
 					<aside class="notes">
 						The resultant file is about 30GB in size.<br/>
@@ -796,6 +805,7 @@
 						<li><p class="fragment fade-in">Login to machines and setup necessary files</p></li>
 						<li><p class="fragment fade-in">Destroy previous VMs and clean up</p></li>
 						<li><p class="fragment fade-in">Restart VMs with new disk image</p></li>
+						<li><p class="fragment fade-in">~5 minutes per machine</p></li>
 					</ul>
 					<aside class="notes">
 						The necessary files are for example secret files and keys.
@@ -817,6 +827,7 @@
 						</code>
 					</pre>
 					<aside class="notes">
+						We specify the Xcode version and simulators.
 					</aside>
 				</section>
 
@@ -848,6 +859,9 @@
 						</code>
 					</pre>
 					<aside class="notes">
+						We specify the machines: IP address and the destination folders.<br/>
+						And the specs of the VMs: CPU and memory.<br/>
+						And the Buildkite queue type for that particular VM.
 					</aside>
 				</section>
 
@@ -858,6 +872,28 @@
 						This ensures visibility of the build status and pull requests.
 					</aside>
 				</section>
+
+				<section>
+					<h2>Learnt a few lessons... 😅</h2>
+					<aside class="notes">
+						Throughout this journey of having a new CI and automating it, we learnt a few lessons.
+					</aside>
+				</section>
+
+
+
+
+				<section data-background-image="media/tetris.gif">
+					<aside class="notes">
+					</aside>
+				</section>
+
+
+
+
+
+
+
 
 				<!-- -->
 
