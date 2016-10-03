@@ -648,6 +648,41 @@
 				<section>
 					<img data-src="media/osx-vm-factory.jpg">
 					<aside class="notes">
+						The code is based on the osx-vm-templates and utilising various libraries to automate as much as possible.
+					</aside>
+				</section>
+
+				<section>
+					<h2>osx-vm-factory</h2>
+					<ul>
+						<li><p class="fragment fade-in">Automates VM creation</p></li>
+						<li><p class="fragment fade-in">Mac App Store&nbsp; ➡️ &nbsp;ready-to-run VM image</p></li>
+						<li><p class="fragment fade-in">Copies VM image to specified machines</p></li>
+						<li><p class="fragment fade-in">Provisions the VMs on those machines</p></li>
+						<li><p class="fragment fade-in">Driven by <code>config.json</code> &amp; <code>machines.json</code></p></li>
+					</ul>
+					<aside class="notes">
+						The factory automates VM creation from MAS app file to VM image.<br/>
+						A fully resolved image containing all the dependencies to build our project.<br/>
+					</aside>
+				</section>
+
+				<section data-transition="slide-in none">
+					<img class="plain" data-src="media/architecture1.jpeg">
+					<aside class="notes">
+						This is an illustration of the new architecture.<br/>
+						Two different repos and two different pipelines.<br/>
+						The left hand side is our mobile-ios project.<br/>
+						The right hand side is our vm-factory project.
+					</aside>
+				</section>
+
+				<section data-transition="none">
+					<img class="plain" data-src="media/architecture2.jpeg">
+					<aside class="notes">
+						The factory has its own Buildkite pipeline.<br/>
+						We have a dedicated machine (red arrow) that performs the build steps.<br/>
+						That machine acts as the VM controller.
 					</aside>
 				</section>
 
@@ -657,6 +692,17 @@
 						The factory has its own Buildkite pipeline.
 					</aside>
 				</section>
+
+				<section>
+					<img class="plain" data-src="media/architecture2.jpeg">
+					<aside class="notes">
+						The following build steps are performed by the machine pointed by the red arrow.
+					</aside>
+				</section>
+
+
+
+
 
 				<section data-transition="slide-in none">
 					<img data-src="media/FactoryStep/factory-step0.jpg">
