@@ -558,8 +558,6 @@
 					</aside>
 				</section>
 
-				<!-- -->
-
 				<section>
 					<h2>Dynamic Pipeline</h2>
 					<ul>
@@ -567,6 +565,7 @@
 						<li><p class="fragment fade-in">Commit messages (e.g. <code>XCODE8</code>)</p></li>
 					</ul>
 					<aside class="notes">
+						There are two Buildkite features that we use heavily.<br/>
 						Rather than having a static file to define our build steps.<br/>
 						We use Buildkite dynamic pipeline feature to generate build steps dynamically based on conditions.
 					</aside>
@@ -575,10 +574,44 @@
 				<section>
 					<img data-src="media/dynamic1.jpg">
 					<img data-src="media/dynamic2.jpg">
-					<img data-src="media/dynamic3.jpg">
 					<aside class="notes">
 					</aside>
 				</section>
+
+				<section>
+					<h2>Block Step 🔐</h2>
+					<ul>
+						<li><p class="fragment fade-in">A <code>block</code> step that pauses the pipeline</p></li>
+						<li><p class="fragment fade-in">Requires a team member to unblock it</p></li>
+						<li><p class="fragment fade-in">Useful for deployment</p></li>
+					</ul>
+					<aside class="notes">
+						A block step is a build step command that pauses the pipeline.<br/>
+						It requires a manual intervention by a team member to unblock it.<br/>
+						This is super useful for deployment steps.<br/>
+						As an example...
+					</aside>
+				</section>
+
+				<section data-transition="slide-in none">
+					<img data-src="media/block1.jpg">
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section data-transition="none">
+					<img data-src="media/block2.jpg">
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section data-transition="none">
+					<img data-src="media/block3.jpg">
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<!-- -->
 
 				<section data-transition="slide-in none">
 					<img class="plain" data-src="media/PreviousCI/PreviousCI.005.jpeg">
